@@ -78,12 +78,14 @@ public class Main {
                 o.addId(orderId);
             }
 
+            //add the orderid of each invalid order to frauds
             orders.forEach((k, v) -> {
                 if (!v.valid)
                     v.orderId.forEach(order -> fraud.add(Integer.parseInt(order)));
             });
         }
 
+        //sort frauds
         Integer[] sortedFrauds = fraud.toArray(new Integer[fraud.size()]);
         Arrays.sort(sortedFrauds);
 

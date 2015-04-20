@@ -1,0 +1,114 @@
+Format:
+Input
+Solution
+Description
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,1,elmer@fudd.com,123 Sesame St.,New York,NY,10011,10987654321
+3,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+Original Test Case from problem
+
+25
+1,58765,emardl@aol.com,9620 Emmerich Manors,West Roberts,NY,88152-2622,2524520704
+2,31376,eleanore_kirlin@yahoo.com,673 Collier Road,Arveltown,CA,56605-6003,8211047638
+3,94588,e_stanton@yahoo.com,46894 Rosenbaum Bypass,Lake Ulices,CA,24349,1700328242
+4,41616,aaliyah_leffler@gmail.com,34398 Price Glens,South Giovanny,NY,46451,6511326846
+5,4496,layne_hauck@aol.com,1540 Mann Islands,New Schowalterborough,NY,12637-2955,2125917951
+6,87096,ashton_dicki@aol.com,689 Wisozk Road,Patriciahaven,IL,04259,1555529164
+7,41616,elizabeth_doyle@gmail.com,34398 Price Glens,South Giovanny,NY,46451,6931804311
+8,3315,emardl@aol.com,9620 Emmerich Manors,West Roberts,NY,88152-2622,2524520704
+9,14403,kobe_ruecker@aol.com,231 Abshire Glen,East Yostburgh,NY,35726,1746043497
+10,73133,h_braun@yahoo.com,255 Fritsch Stream,Port Hoppeview,CA,05443,3307809333
+11,4468,e_huels@gmail.com,477 Hoeger Squares,North Eloise,NY,27808-1041,1244183879
+12,73133,sporerd@aol.com,255 Fritsch Stream,Port Hoppeview,CA,05443,1343398028
+13,22138,l_waters@aol.com,64179 Gerhold Skyway,Port Willistown,IL,67046-4628,4911855965
+14,1954,e_huels@gmail.com,7022 Beatty Tunnel,South Ferryfurt,NY,23638,1244183879
+15,8720,layne_hauck@aol.com,1540 Mann Islands,New Schowalterborough,NY,12637-2955,2125917951
+16,5942,toyg@yahoo.com,673 Collier Road,Arveltown,CA,56605-6003,8211047638
+17,4401,e_stanton@yahoo.com,38386 Rau Parks,West Israel,IL,29922,1700328242
+18,87096,ashton_dicki@aol.com,08171 Schiller Oval,South Waldohaven,NY,13489,6570833982
+19,22138,bogisichw@aol.com,64179 Gerhold Skyway,Port Willistown,IL,67046-4628,3171723318
+20,5841,eduardo_stroman@aol.com,962 Zemlak Cove,Marielleview,NY,84695,9519151886
+21,96837,d_carroll@yahoo.com,60444 Nikolaus Crescent,North Brian,IL,46357-9687,0335428766
+22,1262,d_carroll@yahoo.com,60444 Nikolaus Crescent,North Brian,IL,46357-9687,0335428766
+23,36944,c_lubowitz@gmail.com,2034 Green Points,Smithstad,IL,48637,4201707361
+24,36944,c_lubowitz@gmail.com,948 Hettinger Circle,Port Jermain,IL,69262-3837,5904951351
+25,76373,heaneyw@yahoo.com,962 Zemlak Cove,Marielleview,NY,84695,9519151886
+4,6,7,10,12,13,18,19,23,24
+Original Test Case from problem that was failing because the numbers weren't sorted
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,1,elmer@fudd.com,123 Sesame St.,New York,NY,10011,12345689010
+3,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+nothing
+Good input of same email and same credit cards
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689011
+1,3
+Same email and address, but different credit cards
+
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bugs@bunny.com+dsfgdgsf,123 Sesame St.,New York,NY,10011,12345689010
+nothing
+Different email, but same credit cards
+
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bugs@bunny.c..om,123 Sesame St.,New York,NY,10011,12345689010
+nothing
+Different emails and same credit cards
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bu....gs@bunny.com,124 Sesame St.,New York,NY,10011,12345689011
+1,3
+A bunch of extra periods in the email, different addresses, and credit cards
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bu....gs+asdfsad@bunny.com,124 Sesame St.,New York,NY,10011,12345689011
+1,3
+Emails are the same if plus sign and periods removed
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bu....gs+asdfsada@bunny.com,123 Sesame Street,New York,New York,10011,12345689011
+1,3
+Emails are different even if plus sign and periods removed. St and NY were expanded.
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bU....gs+asdfsada@buNNy.com,123 SesAME Street,New York,NeW York,10011,12345689011
+1,3
+Emails are different, but street is the same. Cases are randomizes
+
+7
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+4,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+5,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+6,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+7,1,bU....gs+asdfsad@buNNy.com,124 SesAME Street,New York,NeW York,10011,12345689011
+1,2,3,4,5,7
+
+3
+1,1,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+2,2,bugs@bunny.com,123 Sesame St.,New York,NY,10011,12345689010
+3,1,bU....gs+asdfsada@buNNy.com,124 SesAME Street,New York,NeW York,10011,12345689011
+1,3
+Emails are the same (cases randomized)
